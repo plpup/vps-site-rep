@@ -1,0 +1,214 @@
+$news-background: #EFF5FF;
+$news-button-background: #3F6DD6;
+$news-hover-button-background: #1342af;
+$news-button-text-color: #FFFFFF;
+$news-text: #747C8B;
+$phone-button: #ffffff;
+$phone-button-border:#D7DDEA;
+$hover-phone-button: #EFF5FF;
+$sign-in-button: #FFFFFF;
+$sign-in-button-border: #D7DDEA;
+$hover-sign-in-button-border: #EFF5FF;
+
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
+.header {
+    @include display(flex, column, nowrap, center);
+    @include size(100%, 100%);
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.news{
+    @include display(flex, row, nowrap, center);
+    @include size(48px, 100%);
+    background-color: $news-background;
+
+    &__label{
+        @include size(24px, 44px);
+        border: 0px;
+        border-radius: 14px;
+        background-color: $news-button-background;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $news-button-text-color;
+        letter-spacing: 1px;
+        margin-left: 120px;
+    }
+
+    &__bold-text{
+        @include font('Open Sans', 13px, bold, normal, 24px);
+        margin-left: 15px;
+        letter-spacing: 0.75px;
+        color: $news-text;
+    }
+
+    &__text{
+        @include font('Open Sans', 13px, 300, normal, 24px);
+        margin-left: 2px;
+        letter-spacing: 0.25px;
+        color: $news-text;
+    }
+
+    &__chevron-img{
+        display: block;
+        margin-top: 2px;
+        margin-left: 10px;
+
+        &:active{
+            filter: contrast(1000%);
+        }
+    }
+
+    &__close-button{
+        display: block;
+        margin-top: 2px;
+        margin-left: 380px;
+        width: 25px;
+        border: none;
+        background-color:#ffffff00;
+        &___img{
+            &:active{
+                filter: contrast(1000%);
+            }
+        }
+    }
+}
+
+.menu-box{
+    @include display(flex, row, nowrap, center);
+    @include size(72px, 1360px);
+    gap: 43px;
+
+    &__img{
+        @include size(36px, 101px);
+        margin-left: 120px;
+    }
+
+    &__products{
+        display: flex;
+        @include size(17px, 108px);
+        margin-left: 14px;
+
+        &__text{
+            margin: 0;
+            @include size(16px, 90px);
+            text-transform: capitalize;
+            @include font('Montserrat', 15px, 700, normal, 16px);
+            letter-spacing: 1px;
+            color: #373633;
+        }
+
+        &__chevron{
+            display: block;
+            margin-left: 8px;
+            margin-top: 5px;
+            @include size(6px, 10px);
+        }
+    }
+
+    &__clients{
+        display: flex;
+        @include size(17px, 79px);
+        margin-left: 2px;
+
+        &__text{
+            margin: 0;
+            @include size(16px, 90px);
+            text-transform: capitalize;
+            @include font('Montserrat', 15px, 700, normal, 16px);
+            letter-spacing: 1px;
+            color: #373633;
+        }
+    }
+
+    &__support{
+        display: flex;
+        @include size(17px, 123px);
+        margin-left: 162px;
+
+        &__text{
+            margin: 0;
+            @include size(16px, 104px);
+            text-transform: capitalize;
+            @include font('Montserrat', 15px, 700, normal, 16px);
+            letter-spacing: 1px;
+            color: #373633;
+        }
+
+        &__chevron{
+            display: block;
+            margin-left: 8px;
+            margin-top: 5px;
+            @include size(6px, 10px);
+        }
+    }
+
+    &__phone{
+        display: flex;
+        @include size(40px, 184px);
+        margin-left: 14px;
+
+        &__number{
+            margin: 0;
+            margin-left: 2px;
+            margin-top: 12px;
+            @include size(16px, 140px);
+            @include font('Open Sans', 14px, 300, normal, 16px);
+            text-align: right;
+            letter-spacing: 1px;
+            text-indent: 1px;
+            color: #282828;
+        }
+
+        &__button{
+            @include size(40px, 40px);
+            border: 1px solid $phone-button-border;
+            border-radius:  50%;
+            background-color: $phone-button;
+
+            &:hover{
+                border: 1px solid $hover-phone-button;
+                background-color: $hover-phone-button; 
+            }
+        }
+    }
+
+    &__sign-in{
+        display: flex;
+        @include size(40px, 112px);
+        margin-left: 5px;
+
+        &__button{
+            @include size(40px, 112px);
+            border: 1px solid $sign-in-button-border;
+            border-radius: 4px;
+            background-color: $sign-in-button;
+            @include font('Open Sans', 12px, 300, normal, 16px);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #747C8B;
+
+            &:hover{
+                border: 1px solid $hover-sign-in-button-border;
+                background-color: $hover-sign-in-button-border; 
+            }
+        }
+    }
+}

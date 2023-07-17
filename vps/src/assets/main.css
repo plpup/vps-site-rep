@@ -1,0 +1,35 @@
+@import './header.css';
+@import './banner.css';
+@import './about.css';
+@import './opportunities.css';
+@import './support.css';
+@import './feedback.css';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0 auto;
+}/*# sourceMappingURL=main.css.map */
