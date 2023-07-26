@@ -1,0 +1,113 @@
+$marker-color:#FFCD2D;
+$text-color:#373633;
+$text-color-accent:#3361CB;
+$opportunities-block-background:#EFF5FF;
+$hover-opportunities-block-background:linear-gradient(45deg, #3F6DD6 0%, #2755C1 99.88%);
+$icons-background:#ffffff;
+
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
+.programm-opportunities{
+    @include size(567px, 1120px);
+    &__title{
+        @include font('Montserrat', 28px, 700, normal, 40px);
+        margin: 0;
+        margin-top: 55px;
+        color: $text-color;
+    }
+    &__blocks-section{
+        @include display(flex, row, wrap);
+        @include size(413px, 1120px);
+        margin-top: 50px;
+        column-gap: 31px;
+        row-gap: 33px;
+        &__block{
+            @include size(190px, 256px);
+            background: $opportunities-block-background;
+            border-radius: 4px;
+            &__background{
+                position: absolute;
+                @include display(flex, row, nowrap, center);
+                margin-top: 24px;
+                margin-left: 24px;
+                @include size(48px, 48px);
+                background-color: $icons-background;
+                border-radius: 25px;
+                &__img{
+                    max-height: 26px;
+                    max-width: 35px;
+                    position: absolute;
+                    margin-left: 10px;
+                }
+            }
+            &__text{
+                @include size(63px, 208px);
+                @include font('Open Sans', 14px, 400, normal, 21px);
+                margin-top: 97px;
+                margin-left: 23px;
+                &_accent{
+                    color: $text-color-accent;
+                }
+            }
+            &:hover{
+                border-radius: 4px;
+                background: $hover-opportunities-block-background;
+                filter: drop-shadow(0px 30px 40px rgba(44, 90, 197, 0.7));
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.included-features{
+    @include display(flex, row, nowrap, none);
+    @include size(none, 1120px);
+    margin: 0;
+    margin-top: 50px;
+    &__block{
+        @include display(flex, column, nowrap, none);
+        &__title{
+            @include font('Montserrat', 28px, 700, normal, 40px);
+            margin: 0;
+            color: $text-color;
+        }
+        &__list{
+            @include display(flex, row, wrap, none);
+            @include size(80px, 930px);
+            column-gap: 40px;
+            row-gap: 40px;
+            margin: 0;
+            margin-top: 55px;
+            &__element{
+                @include size(24px, 280px);
+                @include font('Open Sans', 16px, 300, normal, 24px);
+                margin-top: -12px;
+                margin-left: -10px;
+                color: $text-color;
+                &::marker {
+                    color: $marker-color;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+    &__img{
+        margin-left: -90px;
+    }
+}
+

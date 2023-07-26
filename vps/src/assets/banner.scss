@@ -1,0 +1,109 @@
+$banner-button: #FFCD2D;
+$hover-banner-button:  #FFD82D;
+$banner-background:#EFF5FF;
+$text-color: #373633;
+$accent-text-color:#2F5DC7;
+
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
+.banner{
+    @include display(flex, row, wrap);
+    @include size(537px, 1360px);
+    max-width: 1600px;
+    background: $banner-background;
+
+    &__left-block{
+        @include display(flex, column, nowrap);
+        @include size(none, 100%);
+        width: 740px;
+        &__text{
+            @include size(280px, 718px);
+            @include font('Montserrat', 34px, 700, normal, 56px);
+            margin-top: 80px;
+            margin-left: 120px;
+    
+            &_blue{
+                margin: 0;
+                color: $accent-text-color;
+            }
+    
+            &_black{
+                margin: 0;
+                color: $text-color;
+            }
+    
+            &_tiny{
+                @include size(none, 416px);
+                @include font('Open Sans', 18px, 400, normal, 32px);
+                margin: 0;
+                margin-top: 22px;
+                color: $text-color;
+                mix-blend-mode: normal;
+                opacity: 0.7;
+            }
+    
+            &_tiny-two{
+                margin: 0;
+                width: 416px;
+                @include font('Open Sans', 18px, 400, normal, 32px);
+                color: $text-color;
+                mix-blend-mode: normal;
+                opacity: 0.7;
+            }
+        }
+
+        &__try-free{
+            display: flex;
+            &__button{
+                @include size(56px, 246px);
+                margin-top: 20px;
+                margin-left: 120px;
+                background: $banner-button;
+                border-radius: 4px;
+                border: 0;
+                @include font('Open Sans', 12px, 400, normal, 16px);
+                text-align: center;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: $text-color;
+                &:hover{
+                    background: $hover-banner-button;
+                }
+            }
+    
+            &__price{
+                margin-top: 28px;
+                margin-left: 33px;
+                @include font('Open Sans', 16px, 400, normal, 40px);
+    
+                &_bold{
+                    @include font('Montserrat', 28px, 600, normal, 40px);
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+
+    &__img{
+        @include size(350px, 453px);
+        display: block;
+        margin-top: 75px;
+        margin-left: 55px;
+    }
+}

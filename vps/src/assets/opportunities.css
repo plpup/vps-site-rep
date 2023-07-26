@@ -1,0 +1,125 @@
+.programm-opportunities {
+  height: 567px;
+  width: 1120px;
+}
+.programm-opportunities__title {
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0;
+  margin-top: 55px;
+  color: #373633;
+}
+.programm-opportunities__blocks-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-items: none;
+  height: 413px;
+  width: 1120px;
+  margin-top: 50px;
+  -moz-column-gap: 31px;
+       column-gap: 31px;
+  row-gap: 33px;
+}
+.programm-opportunities__blocks-section__block {
+  height: 190px;
+  width: 256px;
+  background: #EFF5FF;
+  border-radius: 4px;
+}
+.programm-opportunities__blocks-section__block__background {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  place-items: center;
+  margin-top: 24px;
+  margin-left: 24px;
+  height: 48px;
+  width: 48px;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+.programm-opportunities__blocks-section__block__background__img {
+  max-height: 26px;
+  max-width: 35px;
+  position: absolute;
+  margin-left: 10px;
+}
+.programm-opportunities__blocks-section__block__text {
+  height: 63px;
+  width: 208px;
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-top: 97px;
+  margin-left: 23px;
+}
+.programm-opportunities__blocks-section__block__text_accent {
+  color: #3361CB;
+}
+.programm-opportunities__blocks-section__block:hover {
+  border-radius: 4px;
+  background: linear-gradient(45deg, #3F6DD6 0%, #2755C1 99.88%);
+  filter: drop-shadow(0px 30px 40px rgba(44, 90, 197, 0.7));
+  color: #FFFFFF;
+}
+
+.included-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  place-items: none;
+  height: none;
+  width: 1120px;
+  margin: 0;
+  margin-top: 50px;
+}
+.included-features__block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-items: none;
+}
+.included-features__block__title {
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0;
+  color: #373633;
+}
+.included-features__block__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-items: none;
+  height: 80px;
+  width: 930px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 40px;
+  margin: 0;
+  margin-top: 55px;
+}
+.included-features__block__list__element {
+  height: 24px;
+  width: 280px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: -12px;
+  margin-left: -10px;
+  color: #373633;
+}
+.included-features__block__list__element::marker {
+  color: #FFCD2D;
+  font-size: 28px;
+}
+.included-features__img {
+  margin-left: -90px;
+}/*# sourceMappingURL=opportunities.css.map */

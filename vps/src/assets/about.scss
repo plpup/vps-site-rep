@@ -1,0 +1,84 @@
+$about-border:#D7DDEA;
+$marker-color:#FFCD2D;
+$text-color:#373633;
+$discription-text-color:#747C8B;
+
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
+.about-block{
+    @include display(flex, column, nowrap, none);
+    @include size(400px, 1120px);
+    margin-top: 76px;
+    border: 1px solid $about-border;
+    border-radius: 4px;
+
+    &__description{
+        @include display(flex, column, wrap);
+        @include size(220px);
+        margin: 0;
+        margin-top: 3px;
+        margin-left: 30px;
+        &__title{
+            @include font('Montserrat', 28px, 700, normal, 40px);
+            color: $text-color;
+        }
+        &__main-text{
+            @include size(84px, 792px);
+            margin: 0;
+            @include font('Open Sans', 16px, 400, normal, 28px);
+            color: $discription-text-color;
+        }
+        &__img{
+            @include size(171px, 130px);
+            display: block;
+            margin-top: 50px;
+            margin-left: 167px;
+        }
+    }
+
+    &__advantages{
+        @include display(flex, column);
+        margin: 0;
+        margin-left: 30px;
+        &__title{
+            @include font('Montserrat', 22px, 700, normal, 28px);
+            margin: 0;
+            color: $text-color;
+        }
+        &__list{
+            @include display(flex, row, wrap);
+            @include size(80px, 930px);
+            column-gap: 40px;
+            row-gap: 30px;
+            margin: 0;
+            margin-top: 35px;
+            &__element{
+                @include size(24px, 280px);
+                @include font('Open Sans', 16px, 300, normal, 24px);
+                margin-top: -12px;
+                margin-left: -10px;
+                color: $text-color;
+                &::marker {
+                    color: $marker-color;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+

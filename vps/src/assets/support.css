@@ -1,0 +1,118 @@
+.support {
+  margin-top: 70px;
+  width: 1360px;
+  height: 782px;
+  background-color: #EFF5FF;
+}
+.support__text-block {
+  display: flex;
+  margin-left: 120px;
+  margin-top: 73px;
+  width: 1120px;
+  height: 228px;
+  border: 1px solid #D7DDEA;
+}
+.support__text-block__title {
+  display: block;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0px;
+  color: #282828;
+}
+.support__text-block__title_accenet {
+  color: #2CAD62;
+}
+.support__text-block__main-text {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 710px;
+  height: 84px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #747C8B;
+}
+.support__text-block__img {
+  margin-top: 35px;
+  margin-left: 233px;
+}
+.support__stats {
+  display: flex;
+  flex-direction: row;
+  width: 1119px;
+  height: 356px;
+  border-radius: 4px;
+  margin-top: 57px;
+  margin-left: 120px;
+}
+.support__stats____background {
+  width: 1119px;
+  height: 350px;
+}
+.support__stats__title {
+  position: absolute;
+  margin-top: 35px;
+  margin-left: 35px;
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.support__stats__block {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  position: absolute;
+  margin-left: 35px;
+}
+.support__stats__block__info-blocks {
+  margin-top: 108px;
+  width: 230px;
+}
+.support__stats__block__info-blocks__title {
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #FFCD2D;
+}
+.support__stats__block__info-blocks__info {
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #FFFFFF;
+}
+.support__stats__list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 240px;
+  margin-left: 20px;
+}
+.support__stats__list__element {
+  color: #FFFFFF;
+  font-family: "Open Sans";
+  font-size: 16px;
+  line-height: 28px;
+  text-align: left;
+}
+.support__stats__list__element::marker {
+  color: #FFCD2D;
+  font-size: 28px;
+}/*# sourceMappingURL=support.css.map */

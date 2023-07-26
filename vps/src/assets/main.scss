@@ -1,0 +1,39 @@
+@import './header.css';
+@import './banner.css';
+@import './about.css';
+@import './opportunities.css';
+@import './support.css';
+@import './feedback.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
+body {
+    @include display(flex, column, nowrap, center);
+    @include size(100%, 100%);
+    @include font('Open Sans', 14px, 400, normal, 21px);
+    margin: 0 auto;
+}
+
+main{
+    @include display(flex, column, nowrap, center);
+    @include size(100%, 100%);
+    @include font('Open Sans', 14px, 400, normal, 21px);
+    margin: 0 auto;
+}

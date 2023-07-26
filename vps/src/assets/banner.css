@@ -1,0 +1,106 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-items: none;
+  height: 537px;
+  width: 1360px;
+  max-width: 1600px;
+  background: #EFF5FF;
+}
+.banner__left-block {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  place-items: none;
+  height: none;
+  width: 100%;
+  width: 740px;
+}
+.banner__left-block__text {
+  height: 280px;
+  width: 718px;
+  font-family: "Montserrat";
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 56px;
+  margin-top: 80px;
+  margin-left: 120px;
+}
+.banner__left-block__text_blue {
+  margin: 0;
+  color: #2F5DC7;
+}
+.banner__left-block__text_black {
+  margin: 0;
+  color: #373633;
+}
+.banner__left-block__text_tiny {
+  height: none;
+  width: 416px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+  margin-top: 22px;
+  color: #373633;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.banner__left-block__text_tiny-two {
+  margin: 0;
+  width: 416px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #373633;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.banner__left-block__try-free {
+  display: flex;
+}
+.banner__left-block__try-free__button {
+  height: 56px;
+  width: 246px;
+  margin-top: 20px;
+  margin-left: 120px;
+  background: #FFCD2D;
+  border-radius: 4px;
+  border: 0;
+  font-family: "Open Sans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #373633;
+}
+.banner__left-block__try-free__button:hover {
+  background: #FFD82D;
+}
+.banner__left-block__try-free__price {
+  margin-top: 28px;
+  margin-left: 33px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.banner__left-block__try-free__price_bold {
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+}
+.banner__img {
+  height: 350px;
+  width: 453px;
+  display: block;
+  margin-top: 75px;
+  margin-left: 55px;
+}/*# sourceMappingURL=banner.css.map */
