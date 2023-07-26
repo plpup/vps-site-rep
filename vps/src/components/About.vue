@@ -8,7 +8,7 @@
         <section class="about-block__advantages">
             <p class="about-block__advantages__title">{{ advantagesTitle }}</p>
             <ul class="about-block__advantages__list">
-                <li v-for="item in items" :key="item.message" class="about-block__advantages__list__element">
+                <li v-for="(item, index) in items" :key="index" class="about-block__advantages__list__element">
                     {{ item.message }}
                 </li>
             </ul>
