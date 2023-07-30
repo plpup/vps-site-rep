@@ -16,7 +16,7 @@
     <div class="support__stats">
         <span class="support__stats__title">Почему мы лучшие</span>
         <div class="support__stats__block">
-            <div v-for="item in items" class="support__stats__block__info-blocks">
+            <div v-for="(item, index) in items" :key="index" class="support__stats__block__info-blocks">
                 <span class="support__stats__block__info-blocks__title">
                     {{ item.title }} 
                 </span>
@@ -26,7 +26,7 @@
             </div>
         </div>
         <ul class="support__stats__list">
-            <li v-for="element in elements" :key="element.message" class="support__stats__list__element">
+            <li v-for="(element, index) in elements" :key="index" class="support__stats__list__element">
                 {{ element.message }}
             </li>
         </ul>

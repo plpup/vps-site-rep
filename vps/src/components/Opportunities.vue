@@ -2,7 +2,7 @@
     <section class="programm-opportunities">
         <p class="programm-opportunities__title">{{ titleText }}</p>
         <section class="programm-opportunities__blocks-section">
-            <div v-for="item in items" class="programm-opportunities__blocks-section__block">
+            <div v-for="(item, index) in items" :key="index" class="programm-opportunities__blocks-section__block">
                 <div class="programm-opportunities__blocks-section__block__background">
                     <img :src="item.img" :alt="item.alt" class="programm-opportunities__blocks-section__block__background__img">
                 </div>
@@ -17,7 +17,7 @@
             <section class="included-features__block">
                 <p class="included-features__block__title">{{ featuresTitle }}</p>
                 <ul class="included-features__block__list">
-                    <li v-for="element in elements" :key="element.message" class="included-features__block__list__element">
+                    <li v-for="(element, index) in elements" :key="index" class="included-features__block__list__element">
                         {{ element.message }}
                     </li>
                 </ul>
