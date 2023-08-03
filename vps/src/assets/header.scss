@@ -9,6 +9,9 @@ $hover-phone-button: #EFF5FF;
 $sign-in-button: #FFFFFF;
 $sign-in-button-border: #D7DDEA;
 $hover-sign-in-button-border: #EFF5FF;
+$text-color: #373633;
+$banner-button: #FFCD2D;
+$hover-banner-button:  #FFD82D;
 
 @mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
     display: $display;
@@ -210,5 +213,93 @@ $hover-sign-in-button-border: #EFF5FF;
                 background-color: $hover-sign-in-button-border; 
             }
         }
+    }
+}
+
+.modal{
+    @include size(100%, 100%);
+    position: absolute;
+    background-color: #2E4B8D40;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    &__close-button{
+        margin-top: 90px;
+        margin-left: 595px;
+        display: block;
+        width: 25px;
+        border: none;
+        background-color:#ffffff00;
+        &___img{
+            &:active{
+                filter: contrast(1000%);
+            }
+        }
+    }
+    &__block{
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        margin-top: 15px;
+        width: 576px;
+        height: 280px;
+        background-color: #FFFFFF;
+        &__phone__button{
+            margin-top: 35px;
+            @include size(63px, 63px);
+            border: 1px solid $phone-button-border;
+            border-radius:  50%;
+            background-color: $phone-button;
+            &:hover{
+                border: 1px solid $hover-phone-button;
+                background-color: $hover-phone-button; 
+            }
+            &__img{
+                @include size(25px, 25px);
+            }
+        }
+        &__phone__number{
+            @include font('Open Sans', 35px, 400, normal, 16px);
+        }
+        &__buttons{
+            display: flex;
+            gap: 18px;
+            &__call-button{
+                @include size(56px, 207px);
+                background: $banner-button;
+                border-radius: 4px;
+                border: 0;
+                @include font('Open Sans', 12px, 400, normal, 16px);
+                text-align: center;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: $text-color;
+                &:hover{
+                    background: $hover-banner-button;
+                }
+            }
+            &__contacts{
+                @include size(56px, 130px);
+                border: 1px solid #D7DDEA;
+                border-radius: 4px;
+                background-color: #ffffff;
+                text-transform: capitalize;
+                &:hover{
+                    border: 1px solid $hover-sign-in-button-border;
+                    background-color: $hover-sign-in-button-border; 
+                }
+            }
+            &__support{
+                @include size(56px, 141px);
+                border: 1px solid #D7DDEA;
+                border-radius: 4px;
+                background-color: #ffffff;
+                text-transform: capitalize;
+                &:hover{
+                    border: 1px solid $hover-sign-in-button-border;
+                    background-color: $hover-sign-in-button-border; 
+                }
+            }
+        } 
     }
 }
