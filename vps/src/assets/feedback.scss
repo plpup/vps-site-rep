@@ -1,83 +1,74 @@
+@mixin display ($display: flex, $flex-direction: row, $flex-wrap: nowrap, $place-items: none){
+    display: $display;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+    place-items: $place-items;
+}
+@mixin font ($font-family: 'Open Sans', $font-size: 16px, $font-weight: 300, $font-style: normal, $line-height: 24px){
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+}
+@mixin size ($height: none, $width: none){
+    height: $height;
+    width: $width;
+}
+
 .feedback-block{
-    display: flex;
-    flex-direction: column;
-    width: 1360px;
-    max-width: 1600px;
+    @include display(flex, column);
+    @include size(1600px, 1360px);
     &__title{
         margin-top: 58px;
         margin-left: 120px;
-        font-family: 'Montserrat';
-        font-size: 28px;
-        font-weight: 700;
-        line-height: 40px;
-        letter-spacing: 0px;
+        @include font('Montserrat', 28px, 700, normal, 40px);
         text-align: left;
     }
     &__comment{
-        display: flex;
-        flex-direction: row;
+        @include display(flex, row);
         gap: 51px;
         margin-top: 47px;
         margin-left: 120px;
         &__avatar{
-            display: flex;
-            width: 40px;
-            height: 40px;
+            @include size(40px, 40px);
+            @include display(flex);
             border-radius: 40px;
             background-color: #3F6DD6;
             &__text{
                 margin-top: 8px;
                 margin-left: 14px;
-                font-family: 'Open Sans';
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24px;
-                letter-spacing: 0px;
+                @include font('Open Sans', 20px, 700, normal, 24px);
                 text-align: center;
                 color: #FFFFFF;
             }
         }
         &__text-block{
-            display: flex;
-            flex-direction: column;
+            @include display(flex, column);
+            @include size(333px, 928px);
             gap: 18px;
             margin-left: 13px;
-            width: 928px;
-            height: 333px;
             box-shadow: 0px 10px 40px 0px #D7DDEA80;
             &__head{
-                display: flex;
-                flex-direction: row;
+                @include display(flex, row);
                 &__quoute{
-                    width: 24px;
-                    height: 16px;
+                    @include size(16px, 24px);
                     margin-top: 44px;
                     margin-left: 33px;
                 }
                 &__title{
                     display: block;
+                    @include size(52px, 440px);
                     margin-top: 40px;
                     margin-left: 32px;
-                    width: 440px;
-                    height: 52px;
-                    font-family: 'Montserrat';
-                    font-size: 18px;
-                    font-weight: 700;
-                    line-height: 26px;
-                    letter-spacing: 0px;
+                    @include font('Montserrat', 18px, 700, normal, 26px);
                     text-align: left;
                     color: #2E5CC7;
                 }
             }
             &__main-text{
-                width: 854px;
-                height: 120px;
+                @include size(120px, 854px);
                 margin-left: 30px;
-                font-family: 'Open Sans';
-                font-size: 14px;
-                font-weight: 400;
-                line-height: 24px;
-                letter-spacing: 0px;
+                @include font('Open Sans', 14px, 400, normal, 24px);
                 text-align: left;
             }
             &__bottom{
@@ -86,38 +77,23 @@
                 gap: 610px;
                 &__user-info{
                     margin-left: 32px;
-                    width: 116px;
-                    height: 56px;
-                    display: flex;
-                    flex-direction: column;
+                    @include size(56px, 116px);
+                    @include display(flex, column);
                     &__name{
-                        font-family: 'Open Sans';
-                        font-size: 15px;
-                        line-height: 32px;
-                        font-weight: 700;
-                        letter-spacing: 0px;
+                        @include font('Open Sans', 15px, 700, normal, 32px);
                         text-align: left;
                         color: #282828;
                     }
                     &__date{
-                        font-family: 'Open Sans';
-                        font-size: 13px;
-                        font-weight: 400;
-                        line-height: 24px;
-                        letter-spacing: 0px;
+                        @include font('Open Sans', 13px, 400, normal, 24px);
                         text-align: left;
                         color: #747C8B;
                     }
                 }
                 &__all-comment-button{
                     margin-top: 4px;
-                    width: 141px;
-                    height: 48px;
-                    font-family: 'Open Sans';
-                    font-size: 12px;
-                    line-height: 16px;
-                    font-weight: 700;
-                    letter-spacing: 0px;
+                    @include size(48px, 141px);
+                    @include font('Open Sans', 12px, 700, normal, 16px);
                     text-transform: uppercase;
                     text-align: center;
                     color: #808081;
@@ -130,15 +106,12 @@
             }
         }
         &__buttons-block{
-            display: flex;
-            flex-direction: column;
+            @include display(flex, column);
             margin-top: 4px;
             gap: 5px;
-            width: 37px;
-            height: 80px;
+            @include size(80px, 37px);
             &__button{
-                width: 37px;
-                height: 37px;
+                @include size(37px, 37px);
                 border-radius: 50px; 
                 border: 0px;
                 background-color: #EFF5FF;

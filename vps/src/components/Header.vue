@@ -23,11 +23,25 @@
           <img class="menu-box__support__chevron" src="./icons/chevron-color.png" alt="drop-list-support">
         </div>
         <div class="menu-box__phone">
-          <button class="menu-box__phone__button"><img class="" src="./icons/phone.png"></button>
+          <button v-on:click="modal=true" class="menu-box__phone__button"><img class="" src="./icons/phone.png"></button>
           <p class="menu-box__phone__number">+7 495 644-04-04</p>
         </div>
         <div class="menu-box__sign-in">
           <button class="menu-box__sign-in__button">войти</button>
+        </div>
+      </section>
+      <section v-if="modal==true" class="modal">
+        <button v-on:click="modal=false" class="modal__close-button">
+          <img class="news__close-button__img" src="./icons/close.png" alt="close">
+        </button>
+        <div class="modal__block">
+          <button class="modal__block__phone__button"><img class="modal__block__phone__button__img" src="./icons/phone.png"></button>
+          <p class="modal__block__phone__number">+7 495 644-04-04</p>
+          <div class="modal__block__buttons">
+            <button class="modal__block__buttons__call-button">перезвоните мне</button>
+            <button class="modal__block__buttons__contacts">контакты</button>
+            <button class="modal__block__buttons__support">поддержка</button>
+          </div>
         </div>
       </section>
     </header>
@@ -42,7 +56,8 @@ export default {
     },
     data(){
       return{
-        show: true
+        show: true,
+        modal: false
       }
     }
 } 

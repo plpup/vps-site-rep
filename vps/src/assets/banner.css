@@ -46,7 +46,6 @@
   margin-top: 22px;
   color: #373633;
   mix-blend-mode: normal;
-  opacity: 0.7;
 }
 .banner__left-block__text_tiny-two {
   margin: 0;
@@ -57,7 +56,6 @@
   line-height: 32px;
   color: #373633;
   mix-blend-mode: normal;
-  opacity: 0.7;
 }
 .banner__left-block__try-free {
   display: flex;
